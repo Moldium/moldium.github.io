@@ -227,7 +227,6 @@ article.block_s {
     div.servicio {
         min-height: 20rem;
         background-attachment: fixed;
-        background-size: cover;
         background-position: center;
         background-color: var(--base1);
     }@media (min-width: 768px) {
@@ -245,6 +244,12 @@ article.block_s {
         div.servicio {
             background-size: 35rem;
             background-position: calc(50vw + 12rem) center;
+        }
+    }@supports (-webkit-touch-callout: none) {
+        div.servicio.image {
+            background-attachment: scroll;
+            background-size: cover;
+            background-position: center center;
         }
     }
 
