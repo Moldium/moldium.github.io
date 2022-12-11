@@ -95,7 +95,8 @@ body {
         background-color: var(--alt2);
         color: var(--alt1);
         cursor: url("/img/cursor/cursor_2.svg") 32 32, crosshair;
-    }section.dark:not(#inicio) > h1 { /* Revisar */
+    }section.dark:not(#inicio) > h1,
+     section.dark:not(#home) > h1 { /* Revisar */
         border-bottom: 1px solid var(--alt1);
     }section.light {
         background-color: var(--alt1);
@@ -156,16 +157,19 @@ body {
     }
 
 /* #1 INICIO */
-#inicio {
+#inicio,
+#home {
     min-height: calc(100vh - (var(--std) * 2));
     grid-template-rows: 1fr;
     align-items: flex-end;
     background: url(/img/background1.png) left bottom / cover no-repeat;
 }@media (min-width: 768px) {
-    #inicio {
+    #inicio,
+    #home {
         height: calc(100vh - var(--std));
     }
-}#inicio > * {
+}#inicio > *,
+ #home > * {
     text-align: center;
 } 
     div.logo_inicio {
@@ -249,12 +253,14 @@ article.block_s {
     div.produccion {grid-row: 1/9; background-image: url(/img/servicios/Produccion.png);}
 
 /* #3 NOSOTROS */
-#nosotros > article {
+#nosotros > article,
+#about > article {
     display: flex;
     flex-direction: column;
     gap: var(--gapd2);
 }@media (min-width: 480px) {
-    #nosotros > article {
+    #nosotros > article,
+    #about > article {
         gap: var(--gap);
     }
 }
@@ -375,14 +381,16 @@ article.solicitud {
             font-family: 'PixelOperator';
         }
 
-    #gracias {
+    #gracias,
+    #thanks {
         display: none;
         padding: var(--gapd4);
         background-color: var(--main1);
         text-align: center;
     }
 
-    #gracias:target {
+    #gracias:target,
+    #thanks:target {
         display: initial;
     }
 
@@ -436,9 +444,14 @@ footer {
         display: none;
     }
 }#inicio:hover      ~ .navegacion a:nth-of-type(2),
- #proyectos:hover   ~ .navegacion a:nth-of-type(3),
- #servicios:hover   ~ .navegacion a:nth-of-type(4),
- #contacto:hover    ~ .navegacion a:nth-of-type(5) {
+ #servicios:hover   ~ .navegacion a:nth-of-type(3),
+ #nosotros:hover    ~ .navegacion a:nth-of-type(5),
+ #contacto:hover    ~ .navegacion a:nth-of-type(6),
+
+ #home:hover        ~ .navegacion a:nth-of-type(2),
+ #services:hover    ~ .navegacion a:nth-of-type(3),
+ #about:hover       ~ .navegacion a:nth-of-type(5),
+ #contact:hover     ~ .navegacion a:nth-of-type(6) {
     background-color: var(--base1); 
     color: var(--base2);
 }
