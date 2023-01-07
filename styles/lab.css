@@ -130,11 +130,18 @@ body {
                 font-size: 3rem;
             }
         }
-        a {
+        a,
+        article.block_p > label {
             color: var(--main2);
+            cursor: pointer;
+            text-decoration: underline;
         }
-        input[type='checkbox'] {
+        input[type='radio'] {
             display: none;
+        }
+        p.mats {
+            color: var(--main1);
+            text-align: left;
         }
 
 /* HEADER */
@@ -158,131 +165,72 @@ body {
         }
     }
 
-/* #1 INICIO */
-#inicio,
-#home {
-    min-height: calc(100vh - (var(--std) * 2));
-    grid-template-rows: 1fr;
-    align-items: flex-end;
-    background: url(/img/background1.png) left bottom / cover no-repeat;
-}@media (min-width: 768px) {
-    #inicio,
-    #home {
-        height: calc(100vh - var(--std));
-    }
-}#inicio > *,
- #home > * {
-    text-align: center;
-} 
-    div.logo_inicio {
-        background: url(/img/logo/logo_large.svg) no-repeat center;
-        height: 6.5rem;
-    }
-
 /* LOGO STICKY */
 .logo_sticky {
-    position: sticky;
-    top: calc(var(--gapd2) - 4rem);
-    transform: translate(
-        calc(100vw - 5rem - var(--gapd4)),
-        calc(4rem + var(--gapd2)));
+    position: fixed;
+    right: calc(0.5rem + var(--gapd4));
+    top: calc(1rem + var(--gapd2));
     height: 3rem;
     width: 4.5rem;
     background: url(/img/logo/logo_small.svg);
 }@media (min-width: 768px) {
     .logo_sticky {
-        top: calc(var(--gap) - 8rem);
-        transform: translate(
-            calc(100vw - 9rem - var(--gap)),
-            calc(6rem + var(--gap)));
+        right: var(--gap);
         height: 6rem;
         width: 9rem;
     }
 }@media (min-width: 992px) {
     .logo_sticky {
-        transform: translate(
-            calc(100vw - 12rem - var(--gap)),
-            calc(7rem + var(--gap) + var(--gapd2)));
+        left: calc(100vw - 12rem - var(--gap));
+        top: calc(1rem + var(--gap) + var(--gapd2));
     }
 }
 
-/* #2 SERVICIOS */
-article.block_s {
+/* #1 SERVICIOS */
+#servicios {
+    background: url(/img/background2.png) center top / contain no-repeat;
+}
+
+article.block_p {
     display: grid;
     gap: var(--gapd4);
     padding: var(--gapd2);
-    background-color: var(--alt2);
+    background-color: var(--base2);
     color: var(--alt1);
 }@media (min-width: 768px) {
-    article.block_s {
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(auto, 5) 1fr;
+    article.block_p {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto 1fr auto;
         gap: var(--gapd2);
-        cursor: url(/img/cursor/cursor_2.svg) 32 32, crosshair;
+        cursor: url("/img/cursor/cursor_2.svg") 32 32, crosshair;
     }
-}article.block_s > h2 {
-    background-color: var(--main1);
-    color: var(--alt2);
-    padding: var(--gapd4);
+}@media (min-width: 992px) {
+    article.block_p {
+        grid-template-columns: 1fr 2fr;
+    }
 }
 
     div.servicio {
         min-height: 20rem;
-        background-attachment: fixed;
-        background-position: center;
-        background-color: var(--base1);
+    }@media (min-width: 468px) {
+        div.servicio {
+            min-height: 30rem;
+        }
     }@media (min-width: 768px) {
         div.servicio {
-            grid-column: 2/2;
-            background-size: 40vw;
-            background-position: calc(50vw - 3rem) center;
-        }
-    }@media (min-width: 992px) {
-        div.servicio {
-            background-size: 30vw;
-            background-position: calc(50vw  + 8rem) center;
-        }
-    }@media (min-width: 1220px) {
-        div.servicio {
-            background-size: 35rem;
-            background-position: calc(50vw + 12rem) center;
-        }
-    }@supports (-webkit-touch-callout: none) {
-        div.servicio.image {
-            background-attachment: scroll;
-            background-size: cover;
-            background-position: center center;
+            min-height: 20rem;
+            grid-column: 1/2;
+            grid-row: 1/5;
         }
     }
+        div.tallado   {background-image: url(/img/procesos/Tallado.png);}
+        div.corte     {background-image: url(/img/procesos/Corte.png);}
+        div.grabado   {background-image: url(/img/procesos/Grabado.png);}
+        div.impresion {background-image: url(/img/procesos/Impresion.png);}
+        div.laminado  {background-image: url(/img/procesos/Laminado.png);}
+        div.curvado   {background-image: url(/img/procesos/Curvado.png);}
 
-    div.concepto {grid-row: 1/7; background-image: url(/img/servicios/Concepto.png);}
-    div.desarrollo {grid-row: 1/7; background-image: url(/img/servicios/Desarrollo.png);}
-    div.produccion {grid-row: 1/9; background-image: url(/img/servicios/Produccion.png);}
-
-/* #3 NOSOTROS */
-#nosotros > article,
-#about > article {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gapd2);
-}@media (min-width: 480px) {
-    #nosotros > article,
-    #about > article {
-        gap: var(--gap);
-    }
-}
-
-article.block_n {
-    display: grid;
-    gap: var(--gapd2);
-}@media (min-width: 480px) {
-    article.block_n.fundador,
-    article.block_n.objetivos {
-        grid-template-columns: 1fr 3fr;
-    }
-}
-
-/* #4 CONTACTO */
+/* #2 CONTACTO */
 #contacto {
     grid-template-rows: auto auto 1fr auto;
 }
@@ -296,59 +244,68 @@ article.solicitud {
     }
 }
 
-    .entrada {
-        background-color: var(--alt2);
-        padding: var(--gapd2);
+    .columna1 {
         display: grid;
-        gap: var(--gapd4);
+        gap: var(--gapd2);
     }@media (min-width: 768px) {
-        .entrada {
-            gap: var(--gapd2);
-            padding: var(--gapd2);
-        }
-    }@media (min-width: 992px) {
-        .entrada {
-            grid-column: 1/2;
+        .columna1 {
+            grid-template-rows: auto 1fr;
         }
     }
 
-        .entrada > label {
+        .procesos {
+            background-color: var(--alt2);
+            padding: var(--gapd2);
             display: grid;
-            grid-template-columns: 1fr var(--std);
             gap: var(--gapd4);
         }@media (min-width: 768px) {
-            .entrada > label {
-                gap: var(--gapd2)
-            } 
+            .procesos {
+                gap: var(--gapd2);
+                padding: var(--gapd2);
+            }
+        }@media (min-width: 992px) {
+            .procesos {
+                grid-column: 1/2;
+            }
         }
 
-            .box,
-            .checkbox {
-                background-color: var(--base1);
-                text-align: left;
-                padding-left: var(--gapd4);
-                height: var(--std);
-                line-height: var(--std);
-                user-select: none;
-                cursor: pointer;
+            .procesos > label {
+                display: grid;
+                grid-template-columns: 1fr var(--std);
+                gap: var(--gapd4);
+            }@media (min-width: 768px) {
+                .procesos > label {
+                    gap: var(--gapd2)
+                } 
             }
 
-            .entrada > label > input[type='checkbox']:checked ~ span.checkbox {
-                background-color: var(--main1);
-                color: var(--alt2);
-            }
+                .box,
+                .checkbox {
+                    background-color: var(--base1);
+                    text-align: left;
+                    padding-left: var(--gapd4);
+                    height: var(--std);
+                    line-height: var(--std);
+                    user-select: none;
+                    cursor: pointer;
+                }
 
-            .entrada > label > input[type='checkbox']:checked ~ span.checkbox::after {
-                content: "✓";
-                font-size: small;
-                display: block;
-                text-align: center;
-            }
+                .procesos > label > input[type='radio']:checked ~ span.checkbox {
+                    background-color: var(--main1);
+                    color: var(--alt2);
+                }
 
-            .entrada > label > input[type='checkbox']:checked ~ span.checkbox.incluido {
-                background-color: grey;
-                color: var(--alt2);
-            }
+                .procesos > label > input[type='radio']:checked ~ span.checkbox::after {
+                    content: "✓";
+                    font-size: small;
+                    display: block;
+                    text-align: center;
+                }
+
+                .procesos > label > input[type='radio']:checked ~ span.checkbox.incluido {
+                    background-color: grey;
+                    color: var(--alt2);
+                }
 
     .formulario {
         height: 30rem;
@@ -453,15 +410,8 @@ footer {
     .navegacion .boton {
         display: none;
     }
-}#inicio:hover      ~ .navegacion a:nth-of-type(2),
- #servicios:hover   ~ .navegacion a:nth-of-type(3),
- #nosotros:hover    ~ .navegacion a:nth-of-type(4),
- #contacto:hover    ~ .navegacion a:nth-of-type(5),
-
- #home:hover        ~ .navegacion a:nth-of-type(2),
- #services:hover    ~ .navegacion a:nth-of-type(3),
- #about:hover       ~ .navegacion a:nth-of-type(4),
- #contact:hover     ~ .navegacion a:nth-of-type(5) {
+}#servicios:hover   ~ .navegacion a:nth-of-type(2),
+ #contacto:hover    ~ .navegacion a:nth-of-type(3) {
     background-color: var(--base1); 
     color: var(--base2);
 }
@@ -514,12 +464,12 @@ footer {
             background-color: var(--base1);
             color: var(--base2);
         }
-    }#menu > a:nth-of-type(5),
-     #menu > a:nth-of-type(7) {
+    }#menu > a:nth-of-type(3),
+     #menu > a:nth-of-type(5) {
         margin-bottom: var(--gapd2);
     }@media (min-width: 768px) {
-        #menu > a:nth-of-type(5),
-        #menu > a:nth-of-type(7) {
+        #menu > a:nth-of-type(3),
+        #menu > a:nth-of-type(5) {
             margin-bottom: var(--gap);
         }
     }

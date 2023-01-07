@@ -101,7 +101,7 @@
         <article class="solicitud">
             <div class="entrada s1">
                 <label>
-                    <input type="checkbox" id="s1" form="solicitud" name="entry.197483445">
+                    <input type="checkbox" id="s1" form="solicitud" name="entry.2027808520" value="Conceptualización, Exploración">
                     <span class="box animado">Conceptualización</span>
                     <span class="checkbox animado"></span>
 
@@ -109,31 +109,31 @@
                     <span class="checkbox animado incluido"></span>
                 </label>
                 <label>
-                    <input type="checkbox" id="s1_2" form="solicitud" name="entry.705087510">
+                    <input type="checkbox" id="s1_2" form="solicitud" name="entry.2027808520" value="Investigación">
                     <span class="box animado">↳ Investigación (Recomendado)</span>
                     <span class="checkbox animado"></span>
                 </label>
             </div>
             <div class="entrada s2">
                 <label>
-                    <input type="checkbox" id="s2" form="solicitud" name="entry.1294460577">
+                    <input type="checkbox" id="s2" form="solicitud" name="entry.2027808520" value="Desarrollo">
                     <span class="box animado">Desarrollo</span>
                     <span class="checkbox animado"></span>
                 </label>
                 <label>
-                    <input type="checkbox" id="s2_1" form="solicitud" name="entry.1297291391">
+                    <input type="checkbox" id="s2_1" form="solicitud" name="entry.2027808520" value="Patente">
                     <span class="box animado">↳ Patente (Recomendado)</span>
                     <span class="checkbox animado"></span>
                 </label>
                 <label>
-                    <input type="checkbox" id="s2_2" form="solicitud" name="entry.1680007260">
+                    <input type="checkbox" id="s2_2" form="solicitud" name="entry.2027808520" value="Revisión">
                     <span class="box animado">↳ Revisión (Recomendado)</span>
                     <span class="checkbox animado"></span>
                 </label>
             </div>
             <div class="entrada s3">
                 <label>
-                    <input type="checkbox" id="s3" form="solicitud" name="entry.1582502290">
+                    <input type="checkbox" id="s3" form="solicitud" name="entry.2027808520" value="Producción, Matricería, Promoción">
                     <span class="box animado">Inter-producción</span>
                     <span class="checkbox animado"></span>
 
@@ -144,21 +144,23 @@
                     <span class="checkbox animado incluido"></span>
                 </label>
                 <label>
-                    <input type="checkbox" id="s3_3" form="solicitud" name="entry.1140689445">
+                    <input type="checkbox" id="s3_3" form="solicitud" name="entry.2027808520" value="Recuperación">
                     <span class="box animado">↳ Recuperación (Recomendado)</span>
                     <span class="checkbox animado"></span>
                 </label>
             </div>
+
             <form class="formulario" method="post" target="hiddenConfirm" id="solicitud" action="https://docs.google.com/forms/d/e/1FAIpQLSeVh6GP1ruaEsYtvRr_CbBWIp21e4vINZiY0aPfPA646f-nJg/formResponse" onsubmit="submitted=true;">
-                <textarea name="entry.1488177708" placeholder="Describe tu idea"></textarea>
+                <textarea name="entry.1488177708" placeholder="Breve descripción de tu idea (recomendado)"></textarea>
                 <input type="email" name="entry.108577097" placeholder="Correo (requerido)" required>
                 <input type="tel" name="entry.1071213053" placeholder="Celular (recomendado)">
                 <a href="#" target="_blank">Políticas de privacidad</a>
                 <input type="submit" value="Solicitar" class="boton">
             </form>
+
             <iframe name="hiddenConfirm" onload="if(submitted){window.location='#gracias';}" hidden></iframe>
         </article>
-        <p id="gracias">Envío correcto, en breve te contactaremos!.</p>
+        <p id="gracias">Envío correcto!, En breve te contactaremos para más información.</p>
         <p class="advertencia">⚠ Si no recibes un mail de confirmación inmediata, revisa tu carpeta de spam.<br>Tambien puedes escribir a <a class="link" href="mailto:mario@moldium.org">mario@moldium.org</a>.</p>
     </section>
     <!-- NAVEGACIÓN -->
@@ -168,9 +170,10 @@
             <a class="boton" href="#;">CERRAR</a>
             <a href="#inicio">1 Inicio</a>
             <a href="#servicios">2 Servicios</a>
-            <a>↳ Productos</a>
-            <a href="#nosotros">4 Nosotros</a>
-            <a href="#contacto">5 Contacto</a>
+            <a href="#nosotros">3 Nosotros</a>
+            <a href="#contacto">4 Contacto</a>
+            <a href="/lab">🠒 Fablab</a>
+            <a>🠒 Tienda</a>
             <a href="#;" onclick="window.open('https://www.youtube.com/channel/UC2zD6oUcP_1ivPkza1ij-fg');">↳ Video blog</a>
             <a href="#;" onclick="window.open('https://www.instagram.com/moldium/');">↳ Comunidad</a>
         </nav>
