@@ -113,15 +113,20 @@
                     <p>*Revisa los materiales por proceso en la sección de <a href="#servicios">servicios</a> o pregunta por otros en el formulario.</p>
                 </div>
             </div>
-            <form class="formulario" method="post" target="hiddenConfirm" id="solicitud" action="https://docs.google.com/forms/d/e/1FAIpQLSdmW3c4ym0naF1ddqrM9qB4jmASGzfwGMTxAsuDMgiVm-ZuNA/formResponse" onsubmit="submitted=true;">
+            <form class="formulario" method="post" target="hiddenConfirm" id="solicitud" action="https://docs.google.com/forms/d/e/1FAIpQLSdmW3c4ym0naF1ddqrM9qB4jmASGzfwGMTxAsuDMgiVm-ZuNA/formResponse" onsubmit="return checkform(this);">
                 <textarea name="entry.41562924" value="" placeholder="Breve descripción de tu encargo (recomendado)"></textarea>
                 <input type="email" name="entry.922812668" value="" placeholder="Correo (requerido)" required>
                 <input type="tel" name="entry.222871335" value="" placeholder="Celular (recomendado)">
-                <a href="#" target="_blank">Políticas de privacidad</a>
+                <a href="#" target="_blank">⚠ No enviar datos privados (Revisar políticas)</a>
+                <div class="captcha">
+                    <span id="txtCaptchaDiv"></span>
+                    <input type="hidden" id="txtCaptcha" />
+                    <input type="text" placeholder="→ Código Captcha (requerido)" name="txtInput" id="txtInput" required/>
+                </div>
                 <input type="submit" value="Solicitar" class="boton">
             </form>
 
-            <iframe name="hiddenConfirm" onload="if(submitted){window.location='#gracias';}" hidden></iframe>
+            <iframe name="hiddenConfirm" hidden></iframe>
         </article>
         <p id="gracias">Envío correcto!. En breve te contactaremos para mas información.</p>
         <p class="advertencia">⚠ Si no recibes un mail de confirmación inmediata, revisa tu carpeta de spam.<br>Tambien puedes escribir a <a class="link" href="mailto:mario@moldium.org">mario@moldium.org</a>, chatear por nuestro <a href="https://ig.me/m/moldium" target="_blank">Instagram</a> o <a href="https://api.whatsapp.com/send?phone=56988975617" target="_blank">Whatsapp</a>.</p>
@@ -147,4 +152,48 @@
         <p>🛠 2022 V1.10 — Diseño y desarrollo por <img src="/img/logo/logo_large.svg" alt="Moldium logo grande">.</p>
         <p>⛨ Este sitio no utiliza cookies. <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"/></p>
     </footer>
+    <!-- MICRO-CÓDIGO -->
+    <script>
+        // CAPTCHA CODE
+        function checkform(theform){
+            var why = "";
+
+            if(theform.txtInput.value != ""){
+                if(ValidCaptcha(theform.txtInput.value) == false){
+                    why += "Código de seguridad incorrecto\n";
+                }
+            }
+            if(why != ""){
+                alert(why);
+                return false;
+            }
+        }
+
+        var a = Math.ceil(Math.random() * 9)+ '';
+        var b = Math.ceil(Math.random() * 9)+ '';
+        var c = Math.ceil(Math.random() * 9)+ '';
+        var d = Math.ceil(Math.random() * 9)+ '';
+        var e = Math.ceil(Math.random() * 9)+ '';
+
+        var code = a + b + c + d + e;
+
+        document.getElementById("txtCaptcha").value = code;
+        document.getElementById("txtCaptchaDiv").innerHTML = code;
+
+        function ValidCaptcha(){
+            var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+            var str2 = removeSpaces(document.getElementById('txtInput').value);
+
+            if (str1 == str2){
+                window.location='#gracias';
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function removeSpaces(string){
+            return string.split(' ').join('');
+        }
+    </script>
 </body>
