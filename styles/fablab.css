@@ -335,12 +335,25 @@ article.solicitud {
             font-family: 'PixelOperator';
         }
 
-        .formulario > :is(input[type=email], input[type=tel]) {
+        .formulario > :is(input[type=email], input[type=tel]),
+        input[type=text] {
             padding: var(--gapd4);
             background-color: var(--base1);
             border: none;
             font-family: 'PixelOperator';
         }
+
+            div.captcha {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: var(--gapd4);
+            }
+
+                div.captcha > span#txtCaptchaDiv {
+                    padding: var(--gapd4);
+                    color: var(--main1);
+                    user-select: none;
+                }
 
         .formulario > input[type=submit] {
             border: none;
