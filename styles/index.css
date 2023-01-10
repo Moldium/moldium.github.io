@@ -466,15 +466,15 @@ footer {
     .navegacion .boton {
         display: none;
     }
-}#inicio:hover      ~ .navegacion a:nth-of-type(2),
- #servicios:hover   ~ .navegacion a:nth-of-type(3),
- #nosotros:hover    ~ .navegacion a:nth-of-type(4),
- #contacto:hover    ~ .navegacion a:nth-of-type(5),
+}#inicio:hover      ~ .navegacion a:nth-of-type(4),
+ #servicios:hover   ~ .navegacion a:nth-of-type(5),
+ #nosotros:hover    ~ .navegacion a:nth-of-type(6),
+ #contacto:hover    ~ .navegacion a:nth-of-type(7),
 
- #home:hover        ~ .navegacion a:nth-of-type(2),
- #services:hover    ~ .navegacion a:nth-of-type(3),
- #about:hover       ~ .navegacion a:nth-of-type(4),
- #contact:hover     ~ .navegacion a:nth-of-type(5) {
+ #home:hover        ~ .navegacion a:nth-of-type(4),
+ #services:hover    ~ .navegacion a:nth-of-type(5),
+ #about:hover       ~ .navegacion a:nth-of-type(6),
+ #contact:hover     ~ .navegacion a:nth-of-type(7) {
     background-color: var(--base1); 
     color: var(--base2);
 }
@@ -527,7 +527,7 @@ footer {
             background-color: var(--base1);
             color: var(--base2);
         }
-    }#menu > a:nth-of-type(7),
+    }#menu > a:nth-of-type(3),
      #menu > a:nth-of-type(9) {
         margin-bottom: var(--gapd2);
     }
