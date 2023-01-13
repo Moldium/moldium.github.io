@@ -404,10 +404,9 @@ footer {
     }footer > p:nth-of-type(1) {
         color: var(--alt2);
         background-color: var(--main1);
-    }
-
-    footer img {
-        height: 15px;
+    }p.f-logo2 > img {
+        height: 25px;
+        vertical-align: middle;
     }
 
 /* NAVEGACIÓN */
