@@ -150,7 +150,7 @@
                 <div class="captcha">
                     <span id="txtCaptchaDiv"></span>
                     <input type="hidden" id="txtCaptcha" />
-                    <input type="text" placeholder="→ Código Captcha (requerido)" name="txtInput" id="txtInput" required/>
+                    <input type="text" placeholder="→ Código Captcha (requerido)" name="Captcha" id="Captcha" required/>
                 </div>
                 <input type="submit" value="Solicitar" class="boton">
                 <!-- FORMSUBMIT -->
@@ -193,8 +193,8 @@
         function checkform(theform){
             var why = "";
 
-            if(theform.txtInput.value != ""){
-                if(ValidCaptcha(theform.txtInput.value) == false){
+            if(theform.Captcha.value != ""){
+                if(ValidCaptcha(theform.Captcha.value) == false){
                     why += "Código de seguridad incorrecto\n";
                 }
             }
@@ -217,7 +217,7 @@
 
         function ValidCaptcha(){
             var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
-            var str2 = removeSpaces(document.getElementById('txtInput').value);
+            var str2 = removeSpaces(document.getElementById('Captcha').value);
 
             if (str1 == str2){
                 return true;
