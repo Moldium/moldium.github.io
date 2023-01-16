@@ -113,20 +113,23 @@
                     <p>*Revisa los materiales por proceso en la sección de <a href="#servicios">servicios</a> o pregunta por otros en el formulario.</p>
                 </div>
             </div>
-            <form class="formulario" method="post" target="hiddenConfirm" id="solicitud" action="https://docs.google.com/forms/d/e/1FAIpQLSdmW3c4ym0naF1ddqrM9qB4jmASGzfwGMTxAsuDMgiVm-ZuNA/formResponse" onsubmit="return checkform(this);">
-                <textarea name="entry.41562924" value="" placeholder="Breve descripción de tu encargo (recomendado)"></textarea>
-                <input type="email" name="entry.922812668" value="" placeholder="Correo (requerido)" required>
-                <input type="tel" name="entry.222871335" value="" placeholder="Celular (recomendado)">
+            <form class="formulario" target="hiddenConfirm" id="solicitud" action="https://formsubmit.co/0bf00653d98046d30aefe4bdd9c71219" method="post" onsubmit="return checkform(this);">
+                <textarea name="Descripción" value="" placeholder="Breve descripción de tu encargo (recomendado)"></textarea>
+                <input type="email" name="Correo" value="" placeholder="Correo (requerido)" required>
+                <input type="tel" name="Teléfono" value="" placeholder="Celular (recomendado)">
                 <a href="#" target="_blank">⚠ No enviar datos privados (Revisar políticas)</a>
                 <div class="captcha">
                     <span id="txtCaptchaDiv"></span>
                     <input type="hidden" id="txtCaptcha" />
-                    <input type="text" placeholder="→ Código Captcha (requerido)" name="txtInput" id="txtInput" required/>
+                    <input type="text" placeholder="→ Código Captcha (requerido)" name="Captcha" id="Captcha" required/>
                 </div>
                 <input type="submit" value="Solicitar" class="boton">
+                <!-- FORMSUBMIT -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Solicitud de operaciones - Moldium® Fablab">
+                <input type="hidden" name="_template" value="basic">
+                <input type="hidden" name="_next" value="https://moldium.org/fablab#gracias">
             </form>
-
-            <iframe name="hiddenConfirm" hidden></iframe>
         </article>
         <p id="gracias">Envío correcto!. En breve te contactaremos para mas información.</p>
         <p class="advertencia">⚠ Si no recibes un mail de confirmación inmediata, revisa tu carpeta de spam.<br>Tambien puedes escribir a <a class="link" href="mailto:mario@moldium.org">mario@moldium.org</a>, chatear por nuestro <a href="https://ig.me/m/moldium" target="_blank">Instagram</a> o <a href="https://api.whatsapp.com/send?phone=56988975617" target="_blank">Whatsapp</a>.</p>
@@ -159,8 +162,8 @@
         function checkform(theform){
             var why = "";
 
-            if(theform.txtInput.value != ""){
-                if(ValidCaptcha(theform.txtInput.value) == false){
+            if(theform.Captcha.value != ""){
+                if(ValidCaptcha(theform.Captcha.value) == false){
                     why += "Código de seguridad incorrecto\n";
                 }
             }
@@ -183,10 +186,9 @@
 
         function ValidCaptcha(){
             var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
-            var str2 = removeSpaces(document.getElementById('txtInput').value);
+            var str2 = removeSpaces(document.getElementById('Captcha').value);
 
             if (str1 == str2){
-                window.location='#gracias';
                 return true;
             }else{
                 return false;
