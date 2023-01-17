@@ -142,7 +142,7 @@
                     <span class="checkbox animado"></span>
                 </label>
             </div>
-            <form class="formulario" target="_self" id="solicitud" action="https://formsubmit.co/0bf00653d98046d30aefe4bdd9c71219" method="post" onsubmit="return checkform(this);">
+            <form class="formulario" target="_self" id="solicitud" action="https://formsubmit.co/mario@moldium.org" method="post" onsubmit="return checkform(this);">
                 <textarea name="Descripcion" placeholder="Quick description of your idea (recommended)"></textarea>
                 <input type="email" name="Correo" placeholder="Email (required)" required>
                 <input type="tel" name="Teléfono" placeholder="Phone (recommended)">              
@@ -157,7 +157,7 @@
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="2 (EN) Service request - Moldium®">
                 <input type="hidden" name="_template" value="basic">
-                <input type="hidden" name="_next" value="https://moldium.org/en#gracias">
+                <input type="hidden" name="_next" value="https://moldium.org/#gracias">
             </form>
         </article>
         <p id="gracias">Correct sending!, we will contact you shortly for more information.</p>
@@ -195,7 +195,7 @@
 
             if(theform.Captcha.value != ""){
                 if(ValidCaptcha(theform.Captcha.value) == false){
-                    why += "Código de seguridad incorrecto\n";
+                    why += "Incorrect security code\n";
                 }
             }
             if(why != ""){
