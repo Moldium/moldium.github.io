@@ -493,7 +493,7 @@ footer {
         right: var(--gap);
         visibility: initial;
         height: auto;
-        width: 12rem;
+        width: 13rem;
         background-color: transparent;
         opacity: 1;
         mix-blend-mode: difference;
