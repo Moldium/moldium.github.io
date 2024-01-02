@@ -37,14 +37,6 @@
     cursor: pointer;
 }
 
-.animado {
-    transition: .25s;
-    -webkit-transition: .25s;
-    -moz-transition: .25s;
-    -ms-transition: .25s;
-    -o-transition: .25s;
-}
-
 /* TRANSVERSALES */
 html {
     scrollbar-width: thin;
@@ -190,7 +182,7 @@ body {
     .logo_sticky {
         top: calc(var(--gap) - 8rem);
         transform: translate(
-            calc(100vw - 9rem - var(--gap)),
+            calc(100vw - 14rem - var(--gap)),
             calc(6rem + var(--gap)));
         height: 6rem;
         width: 9rem;
@@ -198,12 +190,15 @@ body {
 }@media (min-width: 992px) {
     .logo_sticky {
         transform: translate(
-            calc(100vw - 12rem - var(--gap)),
+            calc(100vw - 15rem - var(--gap)),
             calc(7rem + var(--gap) + var(--gapd2)));
     }
 }
 
 /* #2 SERVICIOS */
+#servicios {
+    grid-template-rows: repeat(6,auto) 1fr;
+}
 article.block_s {
     display: grid;
     gap: var(--gapd4);
@@ -255,162 +250,74 @@ article.block_s {
     div.desarrollo {grid-row: 1/7; background-image: url(/img/servicios/Desarrollo.png);}
     div.produccion {grid-row: 1/9; background-image: url(/img/servicios/Produccion.png);}
 
-/* #3 NOSOTROS */
-#nosotros > article,
-#about > article {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gapd2);
-}@media (min-width: 480px) {
-    #nosotros > article,
-    #about > article {
-        gap: var(--gap);
+/* #3 PROCESOS */
+#procesos {
+    grid-template-rows: repeat(8,auto) 1fr;
+}
+
+article.block_p {
+    display: grid;
+    gap: var(--gapd4);
+    padding: var(--gapd2);
+    background-color: var(--base2);
+    color: var(--alt1);
+}@media (min-width: 768px) {
+    article.block_p {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr auto ;
+        gap: var(--gapd2);
+    }
+}@media (min-width: 992px) {
+    article.block_p {
+        grid-template-columns: 1fr 2fr;
     }
 }
 
-article.block_n {
-    display: grid;
-    gap: var(--gapd2);
-}
+    div.proceso {
+        min-height: 20rem;
+    }@media (min-width: 468px) {
+        div.proceso {
+            min-height: 30rem;
+        }
+    }@media (min-width: 768px) {
+        div.proceso {
+            min-height: 20rem;
+            grid-column: 1/2;
+            grid-row: 1/5;
+        }
+    }
+        div.tallado   {background-image: url(/img/operaciones/Tallado.png);}
+        div.corte     {background-image: url(/img/operaciones/Corte.png);}
+        div.grabado   {background-image: url(/img/operaciones/Grabado.png);}
+        div.impresion {background-image: url(/img/operaciones/Impresion.png);}
+        div.laminado  {background-image: url(/img/operaciones/Laminado.png);}
+        div.curvado   {background-image: url(/img/operaciones/Curvado.png);}
 
 /* #4 CONTACTO */
 #contacto {
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: repeat(5,auto) 1fr;
 }
 
-article.solicitud {
-    display: grid;
-    gap: var(--gap);
-}@media (min-width: 992px){
-    article.solicitud {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-    .entrada {
-        background-color: var(--alt2);
-        padding: var(--gapd2);
+    .solicitud {
         display: grid;
-        gap: var(--gapd4);
-    }@media (min-width: 768px) {
-        .entrada {
-            gap: var(--gapd2);
-            padding: var(--gapd2);
-        }
-    }@media (min-width: 992px) {
-        .entrada {
-            grid-column: 1/2;
-        }
-    }
-
-        .entrada > label {
-            display: grid;
-            grid-template-columns: 1fr var(--std);
-            gap: var(--gapd4);
-        }@media (min-width: 768px) {
-            .entrada > label {
-                gap: var(--gapd2)
-            } 
-        }
-
-            .box,
-            .checkbox {
-                background-color: var(--base1);
-                text-align: left;
-                padding-left: var(--gapd4);
-                height: var(--std);
-                line-height: var(--std);
-                user-select: none;
-                cursor: pointer;
-            }
-
-            .entrada > label > input[type='checkbox']:checked ~ span.checkbox {
-                background-color: var(--main1);
-                color: var(--alt2);
-            }
-
-            .entrada > label > input[type='checkbox']:checked ~ span.checkbox::after {
-                content: "✓";
-                font-size: small;
-                display: block;
-                text-align: center;
-            }
-
-            .entrada > label > input[type='checkbox']:checked ~ span.checkbox.incluido {
-                background-color: grey;
-                color: var(--alt2);
-            }
-
-    .formulario {
-        height: 30rem;
-        display: grid;
-        grid-template-rows: 1fr repeat(4,auto);
         gap: var(--gapd4);
         padding: var(--gapd2);
         background-color: var(--alt2);
-    }@media (min-width: 768px) {
-        .formulario {
-            gap: var(--gapd2);
-            padding: var(--gapd2);
-        }
-    }@media (min-width: 992px) {
-        .formulario {
-            grid-row: 1 / 4;
-            grid-column: 2 / 2;
-            height: 100%;
-        }
+        color: var(--alt1);
+        text-align: center;
     }
 
-        .formulario > textarea {
-            resize: none;
-            padding: var(--gapd4);
-            background-color: var(--base1);
-            border: none;
-            font-family: 'PixelOperator';
-        }
-
-        .formulario > :is(input[type=email], input[type=tel]),
-        input[type=text] {
-            padding: var(--gapd4);
-            background-color: var(--base1);
-            border: none;
-            font-family: 'PixelOperator';
-        }
-
-            div.captcha {
-                display: grid;
-                grid-template-columns: auto 1fr;
-                gap: var(--gapd4);
-            }
-
-                div.captcha > span#txtCaptchaDiv {
-                    padding: var(--gapd4);
-                    color: var(--main1);
-                    user-select: none;
-                }
-
-        .formulario > input[type=submit] {
-            border: none;
+        .solicitud > a {
             background-color: var(--main1);
-            font-family: 'PixelOperator';
+            text-decoration: none;
+            color: var(--alt2);
+            padding: var(--gapd2);
+            font: bold 2rem 'Bucheon';
+        }@media (min-width: 768px) {
+            .solicitud > a {
+                font-size: 3rem;
+            }
         }
-
-    #gracias,
-    #thanks {
-        display: none;
-        padding: var(--gapd4);
-        background-color: var(--main1);
-        text-align: center;
-    }
-
-    #gracias:target,
-    #thanks:target {
-        display: initial;
-    }
-
-    .advertencia {
-        text-align: center;
-    }
 
 /* COPYRIGHT */
 footer {
@@ -457,12 +364,12 @@ footer {
     }
 }#inicio:hover      ~ .navegacion a:nth-of-type(4),
  #servicios:hover   ~ .navegacion a:nth-of-type(5),
- #nosotros:hover    ~ .navegacion a:nth-of-type(6),
+ #procesos:hover    ~ .navegacion a:nth-of-type(6),
  #contacto:hover    ~ .navegacion a:nth-of-type(7),
 
  #home:hover        ~ .navegacion a:nth-of-type(4),
  #services:hover    ~ .navegacion a:nth-of-type(5),
- #about:hover       ~ .navegacion a:nth-of-type(6),
+ #processes:hover       ~ .navegacion a:nth-of-type(6),
  #contact:hover     ~ .navegacion a:nth-of-type(7) {
     background-color: var(--base1); 
     color: var(--base2);
@@ -485,7 +392,7 @@ footer {
     #menu {
         top: auto;
         bottom: 25vh;
-        right: var(--gap);
+        right: var(--gapd2);
         visibility: initial;
         height: auto;
         width: 14rem;
@@ -516,7 +423,7 @@ footer {
             background-color: var(--base1);
             color: var(--base2);
         }
-    }#menu > a:nth-of-type(4),
-     #menu > a:nth-of-type(10) {
+    }#menu > a:nth-of-type(3),
+     #menu > a:nth-of-type(9) {
         margin-bottom: var(--gapd2);
     }
