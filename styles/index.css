@@ -86,8 +86,7 @@ body {
     }section.dark {
         background-color: var(--alt2);
         color: var(--alt1);
-    }section.dark:not(#inicio) > h1,
-     section.dark:not(#home) > h1 { /* Revisar */
+    }section.dark:not(#inicio) > h1 { /* Revisar */
         border-bottom: 1px solid var(--alt1);
     }section.light {
         background-color: var(--alt1);
@@ -127,6 +126,9 @@ body {
             display: none;
         }
 
+.bg_p {background-color: var(--base2);}
+.bg_s {background-color: var(--alt2);}
+
 /* HEADER */
 #configuracion {
     scroll-snap-align: start;
@@ -148,19 +150,16 @@ body {
     }
 
 /* #1 INICIO */
-#inicio,
-#home {
+#inicio {
     min-height: calc(100vh - (var(--std) * 2));
     grid-template-rows: 1fr;
     align-items: flex-end;
-    background: url(/img/background1.png) left bottom / cover no-repeat;
+    background: url(/img/background.png) left bottom / cover no-repeat;
 }@media (min-width: 768px) {
-    #inicio,
-    #home {
+    #inicio {
         height: calc(100vh - var(--std));
     }
-}#inicio > *,
- #home > * {
+}#inicio > * {
     text-align: center;
 } 
     div.logo_inicio {
@@ -177,7 +176,7 @@ body {
         calc(4rem + var(--gapd2)));
     height: 3rem;
     width: 4.5rem;
-    background: url(/img/logo/logo_small.svg);
+    background: url(/img/logo/logo_small.svg) no-repeat;
 }@media (min-width: 768px) {
     .logo_sticky {
         top: calc(var(--gap) - 8rem);
@@ -190,7 +189,7 @@ body {
 }@media (min-width: 992px) {
     .logo_sticky {
         transform: translate(
-            calc(100vw - 15rem - var(--gap)),
+            calc(100vw - 14rem - var(--gap)),
             calc(7rem + var(--gap) + var(--gapd2)));
     }
 }
@@ -203,7 +202,6 @@ article.block_s {
     display: grid;
     gap: var(--gapd4);
     padding: var(--gapd2);
-    background-color: var(--alt2);
     color: var(--alt1);
 }@media (min-width: 768px) {
     article.block_s {
@@ -246,9 +244,9 @@ article.block_s {
         }
     }
 
-    div.concepto {grid-row: 1/7; background-image: url(/img/servicios/Concepto.png);}
-    div.desarrollo {grid-row: 1/7; background-image: url(/img/servicios/Desarrollo.png);}
-    div.produccion {grid-row: 1/9; background-image: url(/img/servicios/Produccion.png);}
+    div.concepto {grid-row: 1/7; background-image: url(/img/procesos/Concepto.png);}
+    div.desarrollo {grid-row: 1/7; background-image: url(/img/procesos/Desarrollo.png);}
+    div.produccion {grid-row: 1/9; background-image: url(/img/procesos/Produccion.png);}
 
 /* #3 PROCESOS */
 #procesos {
@@ -259,12 +257,11 @@ article.block_p {
     display: grid;
     gap: var(--gapd4);
     padding: var(--gapd2);
-    background-color: var(--base2);
     color: var(--alt1);
 }@media (min-width: 768px) {
     article.block_p {
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto 1fr auto ;
+        grid-template-rows: auto auto 1fr auto ;
         gap: var(--gapd2);
     }
 }@media (min-width: 992px) {
@@ -286,12 +283,18 @@ article.block_p {
             grid-row: 1/5;
         }
     }
-        div.tallado   {background-image: url(/img/operaciones/Tallado.png);}
-        div.corte     {background-image: url(/img/operaciones/Corte.png);}
-        div.grabado   {background-image: url(/img/operaciones/Grabado.png);}
-        div.impresion {background-image: url(/img/operaciones/Impresion.png);}
-        div.laminado  {background-image: url(/img/operaciones/Laminado.png);}
-        div.curvado   {background-image: url(/img/operaciones/Curvado.png);}
+        div.consultoria     {background-image: url(/img/servicios/Consultoria.png);}
+        div.tallado         {background-image: url(/img/servicios/Tallado.png);}
+        div.corte           {background-image: url(/img/servicios/Corte.png);}
+        div.grabado         {background-image: url(/img/servicios/Grabado.png);}
+        div.dibujado        {background-image: url(/img/servicios/dibujado.png);}
+        div.impresion       {background-image: url(/img/servicios/Impresion.png);}
+        div.inyeccion       {background-image: url(/img/servicios/Inyeccion.png);}
+        div.termoformado    {background-image: url(/img/servicios/Termoformado.png);}
+        div.laminado        {background-image: url(/img/servicios/Laminado.png);}
+        div.curvado         {background-image: url(/img/servicios/Curvado.png);}
+
+        div.prox {opacity: 25%;}
 
 /* #4 CONTACTO */
 #contacto {
@@ -363,14 +366,9 @@ footer {
         display: none;
     }
 }#inicio:hover      ~ .navegacion a:nth-of-type(4),
- #servicios:hover   ~ .navegacion a:nth-of-type(5),
- #procesos:hover    ~ .navegacion a:nth-of-type(6),
- #contacto:hover    ~ .navegacion a:nth-of-type(7),
-
- #home:hover        ~ .navegacion a:nth-of-type(4),
- #services:hover    ~ .navegacion a:nth-of-type(5),
- #processes:hover       ~ .navegacion a:nth-of-type(6),
- #contact:hover     ~ .navegacion a:nth-of-type(7) {
+ #proceso:hover   ~ .navegacion a:nth-of-type(5),
+ #servicios:hover    ~ .navegacion a:nth-of-type(6),
+ #contacto:hover    ~ .navegacion a:nth-of-type(7){
     background-color: var(--base1); 
     color: var(--base2);
 }
@@ -405,25 +403,25 @@ footer {
     opacity: 1;
 }
 
-    #menu > a:not(:first-of-type) {
+    #menu > *:not(:first-child) {
         width: 100%;
-        padding-right: var(--gap);
-        text-align: right;
-        font: min(4rem, 6vh) 'Bucheon';
+        padding-left: var(--gap);
+        text-align: left;
+        font: min(3rem, 6vh) 'Bucheon';
         text-decoration: none;
         color: var(--alt1);
     }@media (min-width: 768px) {
-        #menu > a:not(:first-of-type) {
+        #menu > *:not(:first-child) {
             text-align: left;
             font: 2rem/2.5rem 'PixelOperator';
             color: var(--base1);
         }
     }@media (min-width: 768px) {
-        #menu > a:not(:first-of-type):hover {
+        #menu > *:not(:first-child):hover {
             background-color: var(--base1);
             color: var(--base2);
         }
-    }#menu > a:nth-of-type(3),
-     #menu > a:nth-of-type(9) {
+    }#menu > *:nth-child(3),
+     #menu > *:nth-child(9) {
         margin-bottom: var(--gapd2);
     }
