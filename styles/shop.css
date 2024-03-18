@@ -136,7 +136,7 @@ body {
     scroll-snap-align: start;
     height: var(--std);
     line-height: var(--std);
-    background-color: var(--main1);
+    background-color: var(--main2);
     text-align: center;
 }@media (min-width: 768px) {
     #configuracion {
