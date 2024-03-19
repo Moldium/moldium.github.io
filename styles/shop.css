@@ -131,26 +131,6 @@ body {
 .bg_p {background-color: var(--base2);}
 .bg_s {background-color: var(--alt2);}
 
-/* HEADER */
-#configuracion {
-    scroll-snap-align: start;
-    height: var(--std);
-    line-height: var(--std);
-    background-color: var(--main2);
-    text-align: center;
-}@media (min-width: 768px) {
-    #configuracion {
-        text-align: right;
-    }
-}#configuracion > a {
-        color: var(--alt2);
-        text-decoration: none;
-    }@media (min-width: 468px) {
-        #configuracion > a {
-            margin: 0px var(--gapd4);
-        }
-    }
-
 /* LOGO STICKY */
 .logo_sticky {
     position: fixed;

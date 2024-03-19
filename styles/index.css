@@ -129,26 +129,6 @@ body {
 .bg_p {background-color: var(--base2);}
 .bg_s {background-color: var(--alt2);}
 
-/* HEADER */
-#configuracion {
-    scroll-snap-align: start;
-    height: var(--std);
-    line-height: var(--std);
-    background-color: var(--main2);
-    text-align: center;
-}@media (min-width: 768px) {
-    #configuracion {
-        text-align: right;
-    }
-}#configuracion > a {
-        color: var(--alt2);
-        text-decoration: none;
-    }@media (min-width: 468px) {
-        #configuracion > a {
-            margin: 0px var(--gapd4);
-        }
-    }
-
 /* #1 INICIO */
 #inicio {
     min-height: calc(100vh - (var(--std) * 2));
@@ -287,7 +267,7 @@ article.block_p {
         div.tallado         {background-image: url(/img/servicios/Tallado.png);}
         div.corte           {background-image: url(/img/servicios/Corte.png);}
         div.grabado         {background-image: url(/img/servicios/Grabado.png);}
-        div.dibujado        {background-image: url(/img/servicios/Dibujado.png);}
+        div.dibujado        {background-image: url(/img/servicios/dibujado.png);}
         div.impresion       {background-image: url(/img/servicios/Impresion.png);}
         div.inyeccion       {background-image: url(/img/servicios/Inyeccion.png);}
         div.termoformado    {background-image: url(/img/servicios/Termoformado.png);}
