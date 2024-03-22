@@ -96,26 +96,6 @@ html {
     }
 }
 
-/* HEADER */
-#configuracion {
-    scroll-snap-align: start;
-    height: var(--std);
-    line-height: var(--std);
-    background-color: var(--main2);
-    text-align: center;
-}@media (min-width: 768px) {
-    #configuracion {
-        text-align: right;
-    }
-}#configuracion > a {
-        color: var(--alt2);
-        text-decoration: none;
-    }@media (min-width: 468px) {
-        #configuracion > a {
-            margin: 0px var(--gapd4);
-        }
-    }
-
 /* #1 ERROR */
 #error {
     grid-template-rows: 1fr auto 1fr;
@@ -145,8 +125,7 @@ html {
     }
 
 /* #1 POLÍTICAS */
-#es,
-#en {
+#es {
     display: grid;
     grid-template-rows: auto 1fr;
 }
