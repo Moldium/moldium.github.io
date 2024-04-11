@@ -186,7 +186,7 @@ article.block_s {
 }@media (min-width: 768px) {
     article.block_s {
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(auto, 5) 1fr;
+        grid-template-rows: repeat(5, auto) 1fr;
         gap: var(--gapd2);
     }
 }article.block_s > h2 {
@@ -224,9 +224,9 @@ article.block_s {
         }
     }
 
-    div.concepto {grid-row: 1/7; background-image: url(/img/procesos/Concepto.png);}
-    div.desarrollo {grid-row: 1/7; background-image: url(/img/procesos/Desarrollo.png);}
-    div.produccion {grid-row: 1/9; background-image: url(/img/procesos/Produccion.png);}
+    div.concepto {grid-row: 1/8; background-image: url(/img/procesos/Concepto.png);}
+    div.desarrollo {grid-row: 1/8; background-image: url(/img/procesos/Desarrollo.png);}
+    div.produccion {grid-row: 1/10; background-image: url(/img/procesos/Produccion.png);}
 
 /* #3 PROCESOS */
 #procesos {
@@ -267,7 +267,7 @@ article.block_p {
         div.tallado         {background-image: url(/img/servicios/Tallado.png);}
         div.corte           {background-image: url(/img/servicios/Corte.png);}
         div.grabado         {background-image: url(/img/servicios/Grabado.png);}
-        div.dibujado        {background-image: url(/img/servicios/Dibujado.png);}
+        div.dibujado        {background-image: url(/img/servicios/dibujado.png);}
         div.impresion       {background-image: url(/img/servicios/Impresion.png);}
         div.inyeccion       {background-image: url(/img/servicios/Inyeccion.png);}
         div.termoformado    {background-image: url(/img/servicios/Termoformado.png);}
