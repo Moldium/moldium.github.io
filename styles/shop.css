@@ -239,6 +239,7 @@ div.prox {
 
 div.medidor {background-image: url(https://i.ytimg.com/vi/aISt1NoA_QU/maxresdefault.jpg);}
 div.medidor::before {background-image: url(https://i.redd.it/kn72motzwpe21.gif)}
+div.cinturon {background-image: url(/img/productos/Cinturon.png);}
 
 div.pack     {background-image: url(/img/servicios/Packaging.png);}
 div.timbre     {background-image: url(/img/servicios/Timbre.png);}
@@ -341,7 +342,7 @@ footer {
             color: var(--base2);
             cursor: pointer;
         }
-    }#menu > *:nth-child(5),
+    }#menu > *:nth-child(3),
      #menu > *:nth-child(7) {
         margin-bottom: var(--gapd2);
     }
