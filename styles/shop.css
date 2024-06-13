@@ -82,7 +82,7 @@ body {
         section {
             min-height: 100vh;
             padding: var(--gap) max(calc(50vw - 45rem), calc(12rem + var(--gap2)));
-            grid-template-rows: repeat(5,auto) 1fr;
+            grid-template-rows: repeat(9,auto) 1fr; /* CAMBIAR + PRODUCTOS */
         }
     }section.dark {
         background-color: var(--alt2);
@@ -173,12 +173,7 @@ article.block_p {
         grid-template-rows: auto auto 1fr auto;
         gap: var(--gapd2);
     }
-}@media (min-width: 992px) {
-    article.block_p {
-        grid-template-columns: 1fr 2fr;
-    }
 }
-
     div.producto,
     div.custom {
         min-height: 20rem;
@@ -237,9 +232,10 @@ div.prox {
     background: url(/img/tile_background.png) 25% repeat fixed;
 }
 
-div.medidor {background-image: url(https://i.ytimg.com/vi/aISt1NoA_QU/maxresdefault.jpg);}
-div.medidor::before {background-image: url(https://i.redd.it/kn72motzwpe21.gif)}
+div.medidor {background-image: url(/img/productos/Medidores.png);}
+div.medidor::before {background-image: url(/img/productos/Medidores.gif)}
 div.cinturon {background-image: url(/img/productos/Cinturon.png);}
+div.cinturon::before {background-image: url(/img/productos/Cinturon.gif)}
 
 div.pack     {background-image: url(/img/servicios/Packaging.png);}
 div.timbre     {background-image: url(/img/servicios/Timbre.png);}

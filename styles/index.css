@@ -86,12 +86,12 @@ body {
     }section.dark {
         background-color: var(--alt2);
         color: var(--alt1);
-    }section.dark:not(#inicio) > h1 { /* Revisar */
+    }section.dark:not(#inicio) > h1 {
         border-bottom: 1px solid var(--alt1);
     }section.light {
         background-color: var(--alt1);
         color: var(--alt2);
-    }section.light > h1 { /* Revisar */
+    }section.light > h1 {
         border-bottom: 1px solid var(--alt2);
     }
 
@@ -101,7 +101,7 @@ body {
             margin-top: var(--gapd4);
         }@media (min-width: 768px) {
             h1 {
-                font-size: 6rem;                /* Revisar */
+                font-size: 6rem;
                 margin-top: var(--gapd2);
             }
         }
@@ -174,9 +174,57 @@ body {
     }
 }
 
-/* #2 SERVICIOS */
+/* #2 PROCESO */
+#proceso {
+    grid-template-rows: repeat(8,auto) 1fr;
+}
+
+article.block_p {
+    display: grid;
+    gap: var(--gapd4);
+    padding: var(--gapd2);
+    color: var(--alt1);
+}@media (min-width: 768px) {
+    article.block_p {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto 1fr auto ;
+        gap: var(--gapd2);
+    }
+}@media (min-width: 992px) {
+    article.block_p {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+    div.proceso {
+        min-height: 20rem;
+    }@media (min-width: 468px) {
+        div.proceso {
+            min-height: 30rem;
+        }
+    }@media (min-width: 768px) {
+        div.proceso {
+            min-height: 20rem;
+            grid-column: 1/2;
+            grid-row: 1/5;
+        }
+    }
+        div.consultoria     {background-image: url(/img/servicios/Consultoria.png);}
+        div.tallado         {background-image: url(/img/servicios/Tallado.png);}
+        div.corte           {background-image: url(/img/servicios/Corte.png);}
+        div.grabado         {background-image: url(/img/servicios/Grabado.png);}
+        div.dibujado        {background-image: url(/img/servicios/Dibujado.png);}
+        div.impresion       {background-image: url(/img/servicios/Impresion.png);}
+        div.inyeccion       {background-image: url(/img/servicios/Inyeccion.png);}
+        div.termoformado    {background-image: url(/img/servicios/Termoformado.png);}
+        div.laminado        {background-image: url(/img/servicios/Laminado.png);}
+        div.curvado         {background-image: url(/img/servicios/Curvado.png);}
+
+        div.prox {opacity: 25%;}
+
+/* #3 SERVICIOS */
 #servicios {
-    grid-template-rows: repeat(6,auto) 1fr;
+    grid-template-rows: repeat(12,auto) 1fr;  /* CAMBIAR + SERVICIOS */
 }
 article.block_s {
     display: grid;
@@ -227,54 +275,6 @@ article.block_s {
     div.concepto {grid-row: 1/8; background-image: url(/img/procesos/Concepto.png);}
     div.desarrollo {grid-row: 1/8; background-image: url(/img/procesos/Desarrollo.png);}
     div.produccion {grid-row: 1/10; background-image: url(/img/procesos/Produccion.png);}
-
-/* #3 PROCESOS */
-#procesos {
-    grid-template-rows: repeat(8,auto) 1fr;
-}
-
-article.block_p {
-    display: grid;
-    gap: var(--gapd4);
-    padding: var(--gapd2);
-    color: var(--alt1);
-}@media (min-width: 768px) {
-    article.block_p {
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto auto 1fr auto ;
-        gap: var(--gapd2);
-    }
-}@media (min-width: 992px) {
-    article.block_p {
-        grid-template-columns: 1fr 2fr;
-    }
-}
-
-    div.proceso {
-        min-height: 20rem;
-    }@media (min-width: 468px) {
-        div.proceso {
-            min-height: 30rem;
-        }
-    }@media (min-width: 768px) {
-        div.proceso {
-            min-height: 20rem;
-            grid-column: 1/2;
-            grid-row: 1/5;
-        }
-    }
-        div.consultoria     {background-image: url(/img/servicios/Consultoria.png);}
-        div.tallado         {background-image: url(/img/servicios/Tallado.png);}
-        div.corte           {background-image: url(/img/servicios/Corte.png);}
-        div.grabado         {background-image: url(/img/servicios/Grabado.png);}
-        div.dibujado        {background-image: url(/img/servicios/Dibujado.png);}
-        div.impresion       {background-image: url(/img/servicios/Impresion.png);}
-        div.inyeccion       {background-image: url(/img/servicios/Inyeccion.png);}
-        div.termoformado    {background-image: url(/img/servicios/Termoformado.png);}
-        div.laminado        {background-image: url(/img/servicios/Laminado.png);}
-        div.curvado         {background-image: url(/img/servicios/Curvado.png);}
-
-        div.prox {opacity: 25%;}
 
 /* #4 CONTACTO */
 #contacto {
