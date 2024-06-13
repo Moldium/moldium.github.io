@@ -345,10 +345,10 @@ footer {
     .navegacion .boton {
         display: none;
     }
-}#inicio:hover      ~ .navegacion a:nth-of-type(4),
- #proceso:hover   ~ .navegacion a:nth-of-type(5),
- #servicios:hover    ~ .navegacion a:nth-of-type(6),
- #contacto:hover    ~ .navegacion a:nth-of-type(7){
+}#inicio:hover      ~ .navegacion a:nth-of-type(2),
+ #proceso:hover   ~ .navegacion a:nth-of-type(3),
+ #servicios:hover    ~ .navegacion a:nth-of-type(4),
+ #contacto:hover    ~ .navegacion a:nth-of-type(5){
     background-color: var(--base1); 
     color: var(--base2);
 }
