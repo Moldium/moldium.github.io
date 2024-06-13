@@ -287,6 +287,10 @@ footer {
     .navegacion .boton {
         display: none;
     }
+}#productos:hover      ~ .navegacion label:nth-of-type(1),
+#customs:hover    ~ .navegacion label:nth-of-type(2){
+   background-color: var(--base1); 
+   color: var(--base2);
 }
 
 #menu {
