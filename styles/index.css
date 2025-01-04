@@ -37,6 +37,10 @@
     cursor: pointer;
 }
 
+.alert {
+    color: var(--main1);
+}
+
 /* TRANSVERSALES */
 html {
     scrollbar-width: thin;
@@ -112,10 +116,10 @@ body {
                 font-size: 4.5rem;
             }
         }
-        h3 {
+        h3, h4 {
             font: bold 2rem 'Bucheon';
         }@media (min-width: 768px) {
-            h3 {
+            h3, h4 {
                 font-size: 3rem;
             }
         }
@@ -213,11 +217,15 @@ article.block_p {
         div.tallado         {background-image: url(/img/servicios/Tallado.png);}
         div.corte           {background-image: url(/img/servicios/Corte.png);}
         div.grabado         {background-image: url(/img/servicios/Grabado.png);}
+        div.corte2          {background-image: url(/img/servicios/Corte2.png);}
+        div.grabado2        {background-image: url(/img/servicios/Grabado2.png);}
         div.dibujado        {background-image: url(/img/servicios/Dibujado.png);}
         div.impresion       {background-image: url(/img/servicios/Impresion.png);}
         div.inyeccion       {background-image: url(/img/servicios/Inyeccion.png);}
-        div.termoformado    {background-image: url(/img/servicios/Termoformado.png);}
+        div.costura         {background-image: url(/img/servicios/Costura.png);}
+        div.tejido          {background-image: url(/img/servicios/Tejido.png);}
         div.laminado        {background-image: url(/img/servicios/Laminado.png);}
+        div.termoformado    {background-image: url(/img/servicios/Termoformado.png);}
         div.curvado         {background-image: url(/img/servicios/Curvado.png);}
 
         div.prox {opacity: 25%;}
@@ -272,9 +280,58 @@ article.block_s {
         }
     }
 
-    div.concepto {grid-row: 1/8; background-image: url(/img/procesos/Concepto.png);}
+    div.diseño {grid-row: 1/8; background-image: url(/img/procesos/Diseño.png);}
     div.desarrollo {grid-row: 1/8; background-image: url(/img/procesos/Desarrollo.png);}
-    div.produccion {grid-row: 1/10; background-image: url(/img/procesos/Produccion.png);}
+    div.fabricacion {grid-row: 1/10; background-image: url(/img/procesos/Fabricacion.png);}
+
+/* ALIANZAS */
+#alianzas {
+    background-color: var(--base2);
+    min-height: 100%;
+    color: var(--base1);
+}
+
+    #alianzas > p {
+        text-align: center;
+    }
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gapd4);
+}
+
+    .partner {
+        height: 15vw;
+        width: 15vw;
+        border: var(--gapd2) solid var(--base1);
+        box-sizing: border-box;
+        background-color: var(--base1);
+		background-repeat: no-repeat;
+  		background-position: center;
+        background-size: contain;
+    }@media (min-width: 768px) {
+        .partner {
+           height: 15vw;
+           width: 15vw;
+        }
+    }@media (min-width: 992px) {
+        .partner {
+            height: 150px;
+            width: 150px;
+         }
+    }
+
+    .partner:nth-child(1) {background-image: url(/img/partners/partner1.png);} 
+    .partner:nth-child(2) {background-image: url(/img/partners/partner2.png);}
+    .partner:nth-child(3) {background-image: url(/img/partners/partner3.png);}
+    .partner:nth-child(4) {background-image: url(/img/partners/partner4.png);}
+    .partner:nth-child(5) {background-image: url(/img/partners/partner5.png);}
+    .partner:nth-child(6) {background-image: url(/img/partners/partner6.png);}
+    .partner:nth-child(7) {background-image: url(/img/partners/partner7.png);}
 
 /* #4 CONTACTO */
 #contacto {
@@ -346,8 +403,8 @@ footer {
         display: none;
     }
 }#inicio:hover      ~ .navegacion a:nth-of-type(2),
- #proceso:hover   ~ .navegacion a:nth-of-type(3),
- #servicios:hover    ~ .navegacion a:nth-of-type(4),
+ #proceso:hover     ~ .navegacion a:nth-of-type(3),
+ #servicios:hover   ~ .navegacion a:nth-of-type(4),
  #contacto:hover    ~ .navegacion a:nth-of-type(5){
     background-color: var(--base1); 
     color: var(--base2);
