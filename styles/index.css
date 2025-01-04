@@ -332,6 +332,9 @@ article.block_s {
     .partner:nth-child(5) {background-image: url(/img/partners/partner5.png);}
     .partner:nth-child(6) {background-image: url(/img/partners/partner6.png);}
     .partner:nth-child(7) {background-image: url(/img/partners/partner7.png);}
+    .partner:nth-child(8) {background-image: url(/img/partners/partner8.png);}
+    .partner:nth-child(9) {background-image: url(/img/partners/partner9.png);}
+    .partner:nth-child(10) {background-image: url(/img/partners/partner10.png);}
 
 /* #4 CONTACTO */
 #contacto {
